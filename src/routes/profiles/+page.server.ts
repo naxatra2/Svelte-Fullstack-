@@ -75,7 +75,8 @@ export const actions = {
    const updateUser = await client.sql`
    UPDATE names
    SET email = ${email}, name = ${name}
-   WHERE     ;`
+   WHERE id = ${id};
+   `;
 	
  	return { success: true };
  },
